@@ -1,25 +1,86 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="web_request_test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y7r-NG-A75">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="535"/>
+                                <color key="backgroundColor" red="0.8091857952" green="0.91459517050000005" blue="0.85262381470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcY-qP-zB8">
+                                <rect key="frame" x="20" y="562" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="46I-js-V4z"/>
+                                    <constraint firstAttribute="height" constant="30" id="oxY-KX-zzN"/>
+                                </constraints>
+                                <state key="normal" title="Swift"/>
+                                <connections>
+                                    <action selector="loadSwift:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zPj-hE-Hax"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsl-Qd-8dQ">
+                                <rect key="frame" x="495" y="562" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="JLw-UG-QxM"/>
+                                    <constraint firstAttribute="height" constant="30" id="M8V-jI-vP7"/>
+                                </constraints>
+                                <state key="normal" title="Parus"/>
+                                <connections>
+                                    <action selector="loadParus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KOg-FP-uds"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkn-9g-EOK">
+                                <rect key="frame" x="258" y="562" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6FA-tq-nEE"/>
+                                    <constraint firstAttribute="width" constant="85" id="faf-h7-4s6"/>
+                                </constraints>
+                                <state key="normal" title="Youtube"/>
+                                <connections>
+                                    <action selector="loadYoutube:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J1q-pe-0bQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="y7r-NG-A75" secondAttribute="trailing" id="0Vo-OC-Ir3"/>
+                            <constraint firstItem="BcY-qP-zB8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2HJ-4i-W4Q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lsl-Qd-8dQ" secondAttribute="bottom" constant="8" id="7ug-mf-BnW"/>
+                            <constraint firstItem="lsl-Qd-8dQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="B1N-Yp-5ap"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BcY-qP-zB8" secondAttribute="bottom" constant="8" id="IOA-D9-RCg"/>
+                            <constraint firstItem="y7r-NG-A75" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RqZ-nF-nB9"/>
+                            <constraint firstItem="Zkn-9g-EOK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SwX-yf-cpS"/>
+                            <constraint firstItem="y7r-NG-A75" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Swh-cm-RcR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y7r-NG-A75" secondAttribute="bottom" constant="50" id="UsJ-SY-6Eq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zkn-9g-EOK" secondAttribute="bottom" constant="8" id="lvq-OK-cfh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="container" destination="y7r-NG-A75" id="U1i-Ju-NY1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="340" y="429"/>
         </scene>
     </scenes>
 </document>
